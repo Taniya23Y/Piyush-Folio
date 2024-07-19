@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-=======
 # Piyush-Folio
 
 This repository contains the source code for Piyush's personal portfolio website. Built using modern web technologies and tools, this portfolio showcases Piyush's projects, skills, and experiences.
@@ -35,21 +25,21 @@ To get a local copy up and running, follow these steps:
 
 1. **Clone the repository:**
 
-    ```bash
-    git clone https://github.com/yourusername/Piyush-Folio.git
-    ```
+   ```bash
+   git clone https://github.com/yourusername/Piyush-Folio.git
+   ```
 
 2. **Navigate to the project directory:**
 
-    ```bash
-    cd Piyush-Folio
-    ```
+   ```bash
+   cd Piyush-Folio
+   ```
 
 3. **Install the dependencies:**
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 ## 🚀 Usage
 
@@ -57,4 +47,5 @@ To start the development server, run:
 
 ```bash
 npm run dev
->>>>>>> f502de319eb40d00d3d1391c18a76717b2cf8384
+
+```

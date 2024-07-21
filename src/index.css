@@ -1,3 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,400;0,600;0,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yu+Gothic:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.Nav-Logo {
+  font-family: "Irish Grover", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.portfolio-span {
+  font-family: "Irish Grover", system-ui;
+  font-size: 60px;
+}
+
+.portfolio-pencil {
+  @media (max-width: 640px) {
+    height: 8vh;
+    width: 8vw;
+  }
+}
+
+.text-heading-1 {
+  font-size: clamp(3.4rem, 8vw, 5.66rem);
+}
+
+.text-heading-2 {
+  font-size: clamp(2.4rem, 8vw, 5.66rem);
+}
+.text-heading-3 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+}
+.text-special {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+.text-title {
+  font-size: clamp(3.75rem, 14vw, 8.75rem);
+}
+.text-works-title {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}

@@ -1,15 +1,15 @@
 import LocomotiveScroll from "locomotive-scroll";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { useEffect, useRef } from "react";
 import NavBar from "./components/ui/NavBar";
 import Hero from "./components/homepage/Hero";
 import About from "./components/homepage/About";
 import Role from "./components/homepage/Role";
 
-function App() {
+const App = () => {
   gsap.registerPlugin(ScrollTrigger);
-  const locomotiveScroll = new LocomotiveScroll();
 
   const sectionRefs = useRef([]); // Creating a sectionRefs array
 
@@ -39,14 +39,16 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-[#1E1E1E] max-w-screen-full overflow-hidden">
+    <div className=" max-w-screen-full overflow-hidden bg-secondary-100 ">
       <NavBar />
       <Hero />
-      <About />
-      <Role forwardedRef={(el) => (sectionRefs.current[0] = el)} />{" "}
-      {/* forwardedRef props to pass into the child component to access the ref, then this will go into the useRef array  */}
+      <main className="px-5 md:px-10 xl:px-20 2xl:px-28">
+        <About />
+        <Role forwardedRef={(el) => (sectionRefs.current[0] = el)} />{" "}
+        {/* forwardedRef props to pass into the child component to access the ref, then this will go into the useRef array  */}
+      </main>
     </div>
   );
-}
+};
 
 export default App;

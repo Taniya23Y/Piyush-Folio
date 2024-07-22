@@ -8,7 +8,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="max-w-screen-full mx-auto fixed top-0 z-[999] w-full flex items-center justify-center bg-[#1E1E1E] px-5 py-2 ">
+    <header className="max-w-screen-full mx-auto fixed top-0 z-50 w-full flex items-center justify-center bg-[#1E1E1E] px-5 py-2 ">
       <nav className="flex items-center justify-between w-full p-1 border-b-[1px] border-[#0DA34E]">
         <div className="Nav-Logo text-2xl text-[#0DA34E] z-50 flex items-center font-[IrishGrover] font-bold">
           Piyush Kaithwas
@@ -65,7 +65,7 @@ const Navbar = () => {
         </div>
         <div>
           <a
-            className="button group relative hover:bg-transparent block md:inline-block"
+            className=" group relative hover:bg-transparent block md:inline-block"
             href="#contact"
           >
             <span className="relative w-fit">

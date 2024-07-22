@@ -5,9 +5,9 @@ export default function Heading({ title }) {
   return (
     <>
       <div className="section-heading select-none">
-        <div className="heading flex items-center justify-center gap-4">
+        <div className="heading flex translate-y-56 items-center justify-center space-x-[3%]">
           <HeadingCircle />
-          <h2 className="w-fit text-5xl sm:text-heading-2 font-medium uppercase">
+          <h2 className="w-fit text-5xl sm:text-heading-2 font-medium uppercase text-secondary-600">
             {title}
           </h2>
           <HeadingCircle />

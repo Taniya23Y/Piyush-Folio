@@ -1,16 +1,58 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
 
-const Navbar = () => {
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+const Navbar = ({ sectionRefs }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const navBar = useRef(null);
+  const logo = useRef(null);
+  const cta = useRef(null);
+  const tl = useRef(gsap.timeline()); // Initialize the timeline here
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    tl.current.to(navBar.current, {
+      y: 0,
+      duration: 3,
+      delay: 0.5,
+      ease: "power4.inOut",
+    });
+  }, []); // Add an empty dependency array to ensure it runs only once
+
+  useEffect(() => {
+    sectionRefs.forEach((section) => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top 375px",
+        end: "bottom 300px",
+        // markers: true,
+        animation: gsap
+          .timeline()
+          .to(navBar.current, { color: "" })
+          .to(".bg-secondary-100", { backgroundColor: "#0E0E0C" }, 0),
+        toggleActions: "restart reverse restart reverse",
+      });
+    });
+  }, [sectionRefs]); // Add sectionRefs to dependency array
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <header className="max-w-screen-full mx-auto fixed top-0 z-50 w-full flex items-center justify-center bg-[#1E1E1E] px-5 py-2 ">
+    <header
+      ref={navBar}
+      className="max-w-screen-full mx-auto fixed top-0 z-50 w-full flex items-center justify-center bg-[#0E0E0C] px-5 py-2 "
+    >
       <nav className="flex items-center justify-between w-full p-1 border-b-[1px] border-[#0DA34E]">
-        <div className="Nav-Logo text-2xl text-[#0DA34E] z-50 flex items-center font-[IrishGrover] font-bold">
+        {/* logo  */}
+        <div
+          ref={logo}
+          className="Nav-Logo text-2xl text-[#0DA34E] z-50 flex items-center font-[IrishGrover] font-bold"
+        >
           Piyush Kaithwas
         </div>
         <div className="flex items-center md:hidden">
@@ -67,6 +109,7 @@ const Navbar = () => {
           <a
             className=" group relative hover:bg-transparent block md:inline-block"
             href="#contact"
+            ref={cta}
           >
             <span className="relative w-fit">
               <span className="absolute bottom-2 h-[0.15em] w-0 bg-white opacity-90 duration-300 ease-out group-hover:w-full"></span>

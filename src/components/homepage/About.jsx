@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import profileImg from "/src/assets/Images/about-img.jpeg";
 
 import Heading from "../ui/Heading";
@@ -45,7 +45,7 @@ const About = () => {
             className="aspect-square h-auto w-full rounded-md object-cover object-center md:aspect-auto"
             src={profileImg}
             width="600"
-            height="800"
+            height="900"
             alt="piyush-image"
           />
         </div>

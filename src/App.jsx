@@ -40,7 +40,7 @@ const App = () => {
 
   return (
     <div className=" max-w-screen-full overflow-hidden bg-secondary-100 ">
-      <NavBar />
+      <NavBar sectionRefs={sectionRefs.current} />
       <Hero />
       <main className="px-5 md:px-10 xl:px-20 2xl:px-28">
         <About />

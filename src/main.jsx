@@ -1,5 +1,8 @@
+/* eslint-disable react/prop-types */
+
 import React from "react";
 import ReactDOM from "react-dom/client";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
 import Cursor from "./components/ui/Cursor.jsx";

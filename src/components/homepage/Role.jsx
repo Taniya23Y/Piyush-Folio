@@ -10,8 +10,8 @@ export default function Role({ forwardedRef }) {
     >
       <div className="flex w-full items-center space-x-20">
         <h1 className="text-heading-1 font-medium text-secondary-400 leading-[1.25em] md:leading-[1.08em]">
-          I actively create Java development 💻 projects that inspire & connect
-          innovation and Technology.
+          I actively create Java development projects that inspire & connect
+          innovation & Technology.
         </h1>
       </div>
     </section>

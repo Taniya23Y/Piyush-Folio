@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 const Hero = () => {
   return (
     <div className="max-w-screen-full mx-auto bg-[#0E0E0C] text-white pt-[13rem] pb-[6rem] px-5 py-2 flex items-center justify-center">

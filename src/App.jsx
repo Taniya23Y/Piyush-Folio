@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import LocomotiveScroll from "locomotive-scroll";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -10,6 +10,8 @@ import NavBar from "./components/ui/NavBar";
 import Hero from "./components/homepage/Hero";
 import About from "./components/homepage/About";
 import Role from "./components/homepage/Role";
+import Skills from "./components/homepage/Skills";
+import Preloading from "./components/ui/Preloading";
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -52,20 +54,27 @@ const App = () => {
     });
   }, []);
 
+  const [loading, setLoading] = useState(true);
+
   return (
     <div className="max-w-screen-full overflow-hidden bg-secondary-100">
       {/* {!loaderFinished ? (
         <Loader timeline={timeline} />
       ) : ()} */}
 
-      <>
-        <NavBar sectionRefs={sectionRefs.current} />
-        <Hero />
-        <main className="px-5 md:px-10 xl:px-20 2xl:px-28">
-          <Role forwardedRef={(el) => (sectionRefs.current[0] = el)} />
-          <About />
-        </main>
-      </>
+      {loading ? (
+        <Preloading setLoading={setLoading} />
+      ) : (
+        <>
+          <NavBar sectionRefs={sectionRefs.current} />
+          <Hero />
+          <main className="px-5 md:px-10 xl:px-20 2xl:px-28">
+            <Role forwardedRef={(el) => (sectionRefs.current[0] = el)} />
+            <About title={"About Me"} />
+            <Skills title={"My Skills"} />
+          </main>
+        </>
+      )}
     </div>
   );
 };

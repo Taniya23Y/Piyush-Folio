@@ -2,7 +2,10 @@
 
 const Hero = () => {
   return (
-    <div className="max-w-screen-full mx-auto bg-[#0E0E0C] text-white pt-[13rem] pb-[6rem] px-5 py-2 flex items-center justify-center">
+    <div
+      id="home"
+      className="hero max-w-screen-full mx-auto bg-[#0E0E0C] text-white pt-[13rem] pb-[6rem] px-5 py-2 flex items-center justify-center"
+    >
       <div className="px-6">
         <div className="welcome w-full h-full">
           <p className="mx-auto text-center flex items-center justify-center flex-wrap md:flex-nowrap">

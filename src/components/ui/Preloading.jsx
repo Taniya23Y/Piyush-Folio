@@ -52,7 +52,7 @@ const Preloading = ({ setLoading }) => {
     const t1 = gsap.timeline({});
 
     await t1
-      .to(".follow", {
+      .to(".content", {
         width: "100%",
         ease: Expo.easeInOut,
         duration: 1.2,

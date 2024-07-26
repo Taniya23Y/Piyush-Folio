@@ -71,7 +71,7 @@ const App = () => {
           <main className="px-5 md:px-10 xl:px-20 2xl:px-28">
             <Role forwardedRef={(el) => (sectionRefs.current[0] = el)} />
             <About title={"About Me"} />
-            <Skills title={"My Skills"} />
+            <Skills forwardedRef={(el) => (sectionRefs.current[1] = el)} title={"My Skills"} />
           </main>
         </>
       )}

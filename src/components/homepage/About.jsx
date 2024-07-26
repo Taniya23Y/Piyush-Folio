@@ -39,12 +39,16 @@ const About = () => {
 
   return (
     // Try using max width to contain the size of the container
+<<<<<<< HEAD
     <section
       ref={aboutSection}
       aria-label="about me"
       id="about"
       className="pt-20"
     >
+=======
+    <section id="about" ref={aboutSection} aria-label="about me" className="pt-20">
+>>>>>>> 1c4a1caaded9eeef463814fde9fe5e552376dc17
       <Heading title="about me" />
 
       <div className="mt-10 flex flex-col items-start gap-8 md:flex-row lg:gap-10 ">

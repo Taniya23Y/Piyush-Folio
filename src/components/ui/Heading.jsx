@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import HeadingCircle from "./HeadingCircle";
+import "../../index.css";
 
 export default function Heading({ title }) {
   return (
@@ -7,7 +8,7 @@ export default function Heading({ title }) {
       <div className="section-heading select-none">
         <div className="heading flex translate-y-56 items-center justify-center space-x-[3%]">
           <HeadingCircle />
-          <h2 className="w-fit text-5xl sm:text-heading-2 font-medium uppercase text-secondary-600">
+          <h2 className="w-fit text-5xl sm:text-heading-2 font-medium  text-secondary-600">
             {title}
           </h2>
           <HeadingCircle />

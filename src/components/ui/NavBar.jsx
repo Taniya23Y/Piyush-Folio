@@ -45,13 +45,13 @@ const Navbar = ({ sectionRefs }) => {
   return (
     <header
       ref={navBar}
-      className="max-w-screen-full mx-auto fixed top-0 z-50 w-full flex items-center justify-center bg-[#0E0E0C] px-5 py-2 "
+      className="max-w-screen-full mx-auto select-none fixed top-0 z-50 w-full flex items-center justify-center bg-[#0E0E0C] px-5 py-2 "
     >
       <nav className="flex items-center justify-between w-full p-1 border-b-[1px] border-[#0DA34E]">
         {/* logo  */}
         <div
           ref={logo}
-          className="Nav-Logo text-2xl text-[#0DA34E] z-50 flex items-center font-[IrishGrover] font-bold"
+          className="Nav-Logo sm:text-2xl md:text-2xl text-[#0DA34E] z-50 flex items-center font-[IrishGrover] font-bold"
         >
           Piyush Kaithwas
         </div>
@@ -113,7 +113,7 @@ const Navbar = ({ sectionRefs }) => {
           >
             <span className="relative w-fit">
               <span className="absolute bottom-2 h-[0.15em] w-0 bg-white opacity-90 duration-300 ease-out group-hover:w-full"></span>
-              <button className="bg-[#0DA34E] capitalize text-xl px-2 py-[5px] rounded-full font-bold text-white">
+              <button className="bg-[#0DA34E] capitalize text-[1rem] px-2 py-[5px] rounded-full font-bold text-white ">
                 LET&apos;s TALK.
               </button>
             </span>

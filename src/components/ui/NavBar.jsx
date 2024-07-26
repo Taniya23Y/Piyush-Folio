@@ -45,21 +45,13 @@ const Navbar = ({ sectionRefs }) => {
   return (
     <header
       ref={navBar}
-<<<<<<< HEAD
-      className="max-w-screen-full mx-auto select-none fixed top-0 z-50 w-full flex items-center justify-center bg-[#0E0E0C] px-5 py-2 "
-=======
       className="max-w-screen-full mx-auto fixed top-0 z-50 w-full flex items-center justify-center bg-[#0E0E0C] px-5 py-2 select-none"
->>>>>>> 1c4a1caaded9eeef463814fde9fe5e552376dc17
     >
       <nav className="flex items-center justify-between w-full p-1 border-b-[1px] border-[#0DA34E]">
         {/* logo  */}
         <div
           ref={logo}
-<<<<<<< HEAD
-          className="Nav-Logo sm:text-2xl md:text-2xl text-[#0DA34E] z-50 flex items-center font-[IrishGrover] font-bold"
-=======
           className="Nav-Logo text-xl sm:text-xl md:text-2xl lg:text-3xl text-[#0DA34E] z-50 flex items-center font-[IrishGrover] font-bold"
->>>>>>> 1c4a1caaded9eeef463814fde9fe5e552376dc17
         >
           Piyush Kaithwas
         </div>

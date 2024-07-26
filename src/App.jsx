@@ -12,8 +12,6 @@ import About from "./components/homepage/About";
 import Role from "./components/homepage/Role";
 import Skills from "./components/homepage/Skills";
 import Preloading from "./components/ui/Preloading";
-import "../style.css";
-import SocialLinks from "./components/homepage/SocialLinks";
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -72,17 +70,11 @@ const App = () => {
           <Hero />
           <main className="px-5 md:px-10 xl:px-20 2xl:px-28">
             <Role forwardedRef={(el) => (sectionRefs.current[0] = el)} />
-<<<<<<< HEAD
-            <About title={"about me"} />
+            <About title={"About Me"} />
             <Skills
               forwardedRef={(el) => (sectionRefs.current[1] = el)}
-              title={"my skills"}
+              title={"My Skills"}
             />
-            <SocialLinks title={"social-links"} />
-=======
-            <About title={"About Me"} />
-            <Skills forwardedRef={(el) => (sectionRefs.current[1] = el)} title={"My Skills"} />
->>>>>>> 1c4a1caaded9eeef463814fde9fe5e552376dc17
           </main>
         </>
       )}

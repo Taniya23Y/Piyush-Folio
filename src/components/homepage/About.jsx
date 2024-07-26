@@ -1,13 +1,9 @@
-/* eslint-disable react/prop-types */
-
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import profileImg from "/src/assets/Images/about-img.jpeg";
 
 import Heading from "../ui/Heading";
-
-// import HeadingCircle from "../ui/HeadingCircle";
 
 const About = () => {
   const profile = useRef(null);
@@ -39,18 +35,13 @@ const About = () => {
 
   return (
     // Try using max width to contain the size of the container
-<<<<<<< HEAD
     <section
+      id="about"
       ref={aboutSection}
       aria-label="about me"
-      id="about"
       className="pt-20"
     >
-=======
-    <section id="about" ref={aboutSection} aria-label="about me" className="pt-20">
->>>>>>> 1c4a1caaded9eeef463814fde9fe5e552376dc17
       <Heading title="about me" />
-
       <div className="mt-10 flex flex-col items-start gap-8 md:flex-row lg:gap-10 ">
         <div className="top-28 overflow-hidden rounded-md md:sticky md:w-1/2">
           <img
@@ -85,7 +76,7 @@ const About = () => {
               <br></br>
               <br></br>
               In addition to my Java expertise, I am passionate about learning
-              Android development to build innovative mobile applications.
+              Android development to build innovative mobile applications. 🚀
             </p>
           </div>
         </div>

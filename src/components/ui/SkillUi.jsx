@@ -47,11 +47,7 @@ export default function SkillUi({ title, description, items }) {
   return (
     <div
       ref={skillUi}
-<<<<<<< HEAD
-      className=" mt-10 flex justify-between items-center flex-col gap-40 md:flex-rows-3 md:gap-24 2xl:gap-36 xl:gap-32"
-=======
       className=" mt-10 flex justify-between items-center flex-col gap-40 md:flex-rows-3 md:gap-24 2xl:gap-36 xl:gap-32 select-none"
->>>>>>> 1c4a1caaded9eeef463814fde9fe5e552376dc17
     >
       <div className="relative rounded-lg border bg-gradient-to-r from-[#AEAE9D] to-[#0E0E0C]  p-[2rem] w-full md:w-full lg:w-4/5">
         <div className="flex flex-col md:flex-row md:justify-between md:space-x-8 ">

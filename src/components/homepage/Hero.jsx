@@ -1,6 +1,14 @@
 /* eslint-disable react/prop-types */
 
+// import gsap from "gsap";
+
 const Hero = () => {
+  //Gsap animation for helloGsap and piyushGsap
+  // gsap.from(".helloGsap p", {
+  //   y: 150,
+  //   stagger: 0.9,
+  // });
+
   return (
     <div
       id="home"
@@ -43,11 +51,13 @@ const Hero = () => {
         </div>
         <br />
 
-        <div className="text-center mt-8 px-5 py-2">
-          <p className="text-6xl font-semibold text-secondary-600">
+        <div className="helloGsap text-center mt-8 px-5 py-2 ">
+          <p className="line1 text-6xl font-semibold text-secondary-600 overflow-hidden">
             Hii👋, I&apos;m Piyush Kaithwas,
           </p>
-          <p className="text-6xl mt-2 text-[#E3E3DE]">Java Developer.</p>
+          <p className="line2 text-6xl mt-2 text-[#E3E3DE] overflow-hidden">
+            Java Developer.
+          </p>
         </div>
 
         <div className="info-description px-5 py-2 text-center mt-6 max-w-screen-md mx-auto text-opacity-30">

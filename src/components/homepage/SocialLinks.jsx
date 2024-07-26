@@ -10,8 +10,8 @@ const SocialLinks = ({ title }) => {
         <Heading title={title} />
       </div>
 
-      <div className="link-box flex justify-between items-center p-5 mx-auto">
-        <div className="flex">
+      <div className="link-box flex justify-between items-center p-5 mx-auto ">
+        <div className="flex md:flex-row sm:flex-row flex-col">
           {/* leetcode-linkBox */}
           <div className="leetcode-linkBox bg-cyan-300 m-2 rounded-md p-5">
             <p>welcome to my leetcode area</p>

@@ -37,7 +37,7 @@ export default function Skills({ forwardedRef }) {
       id="skills"
       ref={forwardedRef}
       className="my-[10%] mx-auto max-w-screen-xl"
-      aria-label="services"
+      aria-label="skills"
     >
       <Heading title="my skills" />
       <div className=" flex justify-center items-center flex-col">

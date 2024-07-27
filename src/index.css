@@ -157,3 +157,8 @@ button {
   --tw-bg-opacity: 1;
   background-color: rgb(112 112 92 / var(--tw-bg-opacity));
 }
+
+.cardContainer {
+  position: sticky;
+  top: 0px;
+}

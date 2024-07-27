@@ -64,7 +64,8 @@ const About = () => {
             </h3>
             <p
               ref={body}
-              className=" translate-y-10 text-body-1 2xl:text-4xl opacity-0"
+              // className=" translate-y-10 text-body-1 2xl:text-4xl opacity-0 text-[#E3E3DE]"
+              className=" translate-y-10  text-xl 2xl:text-4xl opacity-0  text-secondary-600"
             >
               A dedicated Java developer 💻 with a passion for crafting
               efficient and robust backend systems.

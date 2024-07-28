@@ -4,12 +4,12 @@ export default function Role({ forwardedRef }) {
   return (
     <section
       ref={forwardedRef}
-      id="role"
+      id="about"
       className="select-none flex my-20 md:my-[12%] py-10 flex-col items-center justify-center overflow-hidden nav-change"
-      aria-label="role"
+      aria-label=""
     >
       <div className="flex w-full items-center space-x-20">
-        <h1 className="text-heading-1 font-medium text-secondary-400 leading-[1.25em] md:leading-[1.08em]">
+        <h1 className="text-heading-1 font-medium text-secondary-400 leading-[1.25em] md:leading-[1.08em] 2xl:text-[10rem] 2xl:p-10 ">
           I actively create Java development projects that inspire & connect
           innovation & Technology.
         </h1>

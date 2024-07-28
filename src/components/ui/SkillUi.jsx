@@ -71,7 +71,7 @@ const SkillUi = ({ title, description, items }) => {
             <div className="space-y-3 2xl:space-y-10">
               <h3
                 ref={headingRef}
-                className="text-heading-3 2xl:text-7xl font-semibold leading-tight translate-y-10 opacity-0"
+                className="text-heading-3 2xl:text-7xl font-semibold leading-tight translate-y-10 opacity-0 "
               >
                 {title}
               </h3>

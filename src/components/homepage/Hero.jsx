@@ -1,13 +1,66 @@
-/* eslint-disable react/prop-types */
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// import gsap from "gsap";
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
-  //Gsap animation for helloGsap and piyushGsap
-  // gsap.from(".helloGsap p", {
-  //   y: 150,
-  //   stagger: 0.9,
-  // });
+  const helloRef = useRef(null);
+  const javaRef = useRef(null);
+
+  // animations for all Heading components
+
+  useEffect(() => {
+    const sectionHeadings = document.querySelectorAll(".section-heading");
+    sectionHeadings.forEach((heading) => {
+      const headings = heading.querySelectorAll(".heading");
+      headings.forEach((individualHeading) => {
+        ScrollTrigger.create({
+          trigger: heading,
+          start: "top 550px",
+          end: "bottom 550px",
+          animation: gsap.to(individualHeading, {
+            opacity: 1,
+            y: 0,
+            ease: "power4.out",
+            duration: 1,
+          }),
+          toggleActions: "play none none none",
+        });
+      });
+    });
+  }, []);
+
+  // animation for both texts
+
+  useEffect(() => {
+    const helloElement = helloRef.current;
+    const javaElement = javaRef.current;
+
+    ScrollTrigger.create({
+      trigger: helloElement,
+      start: "top 80%",
+      end: "bottom top",
+      animation: gsap.to(helloElement, {
+        y: 0,
+        ease: "power4.out",
+        duration: 1,
+      }),
+      toggleActions: "play none none none",
+    });
+
+    ScrollTrigger.create({
+      trigger: javaElement,
+      start: "top 80%",
+      end: "bottom top",
+      animation: gsap.to(javaElement, {
+        y: 0,
+        ease: "power4.out",
+        duration: 1,
+      }),
+      toggleActions: "play none none none",
+    });
+  }, []);
 
   return (
     <div
@@ -52,16 +105,24 @@ const Hero = () => {
         <br />
 
         <div className="helloGsap text-center mt-8 px-5 py-2 ">
-          <p className="line1 text-6xl font-semibold text-secondary-600 overflow-hidden">
-            Hii👋, I&apos;m Piyush Kaithwas,
+          <p
+            ref={helloRef}
+            className="line1 text-6xl font-semibold text-secondary-600 overflow-hidden"
+            style={{ transform: "translateY(50px)" }}
+          >
+            Hello👋, I&apos;m Piyush Kaithwas,
           </p>
-          <p className="line2 text-6xl mt-2 text-[#E3E3DE] overflow-hidden">
+          <p
+            ref={javaRef}
+            className="line2 text-6xl mt-2 text-[#E3E3DE] overflow-hidden"
+            style={{ transform: "translateY(50px)" }}
+          >
             Java Developer.
           </p>
         </div>
 
         <div className="info-description px-5 py-2 text-center mt-6 max-w-screen-md mx-auto text-opacity-30">
-          <p className="text-lg font-light ">
+          <p className="text-lg font-light opacity-40">
             Passionate Java developer specializing in creating robust and <br />
             efficient backend systems.
           </p>

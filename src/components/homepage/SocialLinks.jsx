@@ -1,41 +1,98 @@
 /* eslint-disable react/prop-types */
-
 import Heading from "../ui/Heading";
-// import HeadingCircle from "../ui/HeadingCircle";
+import "../../index.css";
+import Cursor from "../ui/Cursor";
 
 const SocialLinks = ({ title }) => {
   return (
-    <div className="">
-      <div className="">
+    <section
+      id="skills"
+      className="my-[10%] mx-auto max-w-screen-xl"
+      aria-label="skills"
+    >
+      <div>
         <Heading title={title} />
       </div>
 
-      <div className="link-box flex justify-between items-center p-5 mx-auto ">
-        <div className="flex md:flex-row sm:flex-row flex-col">
+      <div
+        id="cardContainer"
+        className="flex justify-center items-center p-5 mx-auto"
+      >
+        <div
+          id="card"
+          className="flex flex-col md:flex-row gap-4 w-[100vw] mx-20 px-50 md:px-10 sm:px-10 justify-center items-center"
+        >
+          {/* Linkedin-linkBox */}
+          <div className="github-linkBox bg-[#1e1e1e] rounded-md w-[18rem] h-[12rem] sm:w-[20rem] sm:h-[13rem] md:w-[20rem] md:h-[10rem] xl:w-[20rem] xl:h-[19rem] 2xl:w-[40rem] 2xl:h-[30rem] flex justify-center items-center flex-col gap-4">
+            <h1 className="gif-background underline text-white uppercase font-bold text-4xl">
+              Linkedin
+            </h1>
+            <div className="bg-[#D1D2C4] flex justify-center items-center p-1 rounded-md w-[17rem] h-[7rem] sm:w-[19rem] sm:h-[8rem] md:w-[13rem] md:h-[6rem] lg:w-[18rem] lg:h-[8rem] xl:w-[19rem] xl:h-[14rem] 2xl:w-[38rem] 2xl:h-[25rem]">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/taniyay"
+                className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl"
+              >
+                <p className=" flex-col sm:text-xs md:text-sm lg:text-xl 2xl:text-5xl xl:p-7">
+                  Connect with me on LinkedIn for professional updates and
+                  networking.
+                  <h3 className="text-[#665C51] font-bold underline">
+                    View LinkedIn
+                  </h3>
+                </p>
+              </a>
+            </div>
+          </div>
+
+          {/* Github-linkBox */}
+          <div className="linkedin-linkBox bg-[#1e1e1e] rounded-md w-[18rem] h-[12rem] sm:w-[20rem] sm:h-[13rem] md:w-[20rem] md:h-[10rem] xl:w-[20rem] xl:h-[19rem] 2xl:w-[40rem] 2xl:h-[30rem] flex justify-center items-center flex-col gap-4">
+            <h1 className="gif-background underline text-white uppercase font-bold text-4xl">
+              GitHub
+            </h1>
+            <div className="bg-[#D1D2C4] rounded-md flex justify-center items-center p-1 w-[17rem] h-[7rem] sm:w-[19rem] sm:h-[8rem] md:w-[13rem] md:h-[6rem] lg:w-[18rem] lg:h-[8rem] xl:w-[19rem] xl:h-[14rem] 2xl:w-[38rem] 2xl:h-[25rem]">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/Taniya23Y"
+                className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl"
+              >
+                <p className=" flex-col sm:text-xs md:text-sm lg:text-xl 2xl:text-5xl xl:p-7">
+                  Explore my projects and contributions on GitHub.
+                  <h3 className="text-[#665C51] font-bold underline">
+                    View GitHub
+                  </h3>
+                </p>
+              </a>
+            </div>
+          </div>
+
           {/* leetcode-linkBox */}
-          <div className="leetcode-linkBox bg-cyan-300 m-2 rounded-md p-5">
-            <p>welcome to my leetcode area</p>
-            <br />
-            <p>Here i solve unhealthy obsession all my shuhhhhh. 👩‍💻👩‍💻👩‍💻</p>
-            <br />
-          </div>
-
-          <div className="github-linkBox bg-purple-300 m-2 rounded-md p-5">
-            <p>welcome to my github area</p>
-            <br />
-            <p>Here i solve unhealthy obsession all my shuhhhhh. 🤫🤫🤫</p>
-            <br />
-          </div>
-
-          <div className="linkedin-linkBox bg-blue-300 m-2 rounded-md p-5">
-            <p>welcome to my linkedin area</p>
-            <br />
-            <p>Here i solve unhealthy obsession all my shuhhhhh. 🤫🤫🤫</p>
-            <br />
+          <div className="leetcode-linkBox bg-[#1e1e1e] rounded-md w-[18rem] h-[12rem] sm:w-[20rem] sm:h-[13rem] md:w-[20rem] md:h-[10rem] xl:w-[20rem] xl:h-[19rem] 2xl:w-[40rem] 2xl:h-[30rem] flex justify-center items-center flex-col gap-4">
+            <h1 className="gif-background underline text-white uppercase font-bold text-4xl">
+              Leetcode
+            </h1>
+            <div className="bg-[#D1D2C4] rounded-md flex justify-center items-center p-1 flex-col w-[17rem] h-[7rem] sm:w-[19rem] sm:h-[8rem] md:w-[13rem] md:h-[6rem] lg:w-[18rem] lg:h-[8rem] xl:w-[19rem] xl:h-[14rem] 2xl:w-[38rem] 2xl:h-[25rem]">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://leetcode.com/u/taniyayadav882/"
+                className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl"
+              >
+                <p className=" sm:text-xs md:text-sm lg:text-xl 2xl:text-5xl xl:p-7">
+                  Explore my coding journey and problem-solving solutions on
+                  LeetCode.
+                  <h3 className="text-[#665C51] font-bold underline">
+                    View Leetcode
+                  </h3>
+                </p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <Cursor />
+    </section>
   );
 };
 

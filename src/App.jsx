@@ -78,7 +78,10 @@ const App = () => {
               title={"my skills"}
             />
             <SocialLinks title={"social-links"} />
-            <Projects title={"projects"} />
+            <Projects
+              forwardedRef={(el) => (sectionRefs.current[2] = el)}
+              title={"projects"}
+            />
           </main>
         </>
       )}

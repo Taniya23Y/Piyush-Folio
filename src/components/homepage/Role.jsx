@@ -4,7 +4,7 @@ export default function Role({ forwardedRef }) {
   return (
     <section
       ref={forwardedRef}
-      id="about"
+      id="role"
       className="select-none flex my-20 md:my-[12%] py-10 flex-col items-center justify-center overflow-hidden nav-change"
       aria-label=""
     >

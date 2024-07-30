@@ -5,9 +5,9 @@ export default function Cursor() {
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const curs = useRef(null);
   const svg = useRef(null);
+  const text = useRef(null);
 
   useEffect(() => {
-    // TODO Learn useContext and useRef here
     const images = document.querySelectorAll(".img");
 
     const tl = gsap.timeline({ paused: true });
@@ -16,7 +16,9 @@ export default function Cursor() {
       height: "112px",
       width: "112px",
       ease: "expo.inout",
-    }).to(svg.current, { opacity: 1, width: "96px", height: "96px" }, 0);
+    })
+      .to(svg.current, { opacity: 1, width: "96px", height: "96px" }, 0)
+      .to(text.current, { opacity: 1 }, 0);
 
     images.forEach((img) => {
       img.addEventListener("mouseenter", function () {
@@ -27,7 +29,8 @@ export default function Cursor() {
         tl.reverse();
         tl.eventCallback("onReverseComplete", function () {
           gsap.set(svg.current, { opacity: 0 }); // Hide the SVG element
-          gsap.set(curs.current, { height: "12px", width: "12px" }); // Hide the SVG element
+          gsap.set(text.current, { opacity: 0 }); // Hide the text element
+          gsap.set(curs.current, { height: "12px", width: "12px" });
         });
       });
     });
@@ -67,6 +70,10 @@ export default function Cursor() {
           d="M6 19L19 6m0 0v12.48M19 6H6.52"
         />
       </svg>
+      <div
+        ref={text}
+        className="absolute text-white text-xs opacity-0 pointer-events-none"
+      ></div>
     </div>
   );
 }

@@ -14,31 +14,20 @@ import Skills from "./components/homepage/Skills";
 import Preloading from "./components/ui/Preloading";
 import SocialLinks from "./components/homepage/SocialLinks";
 import Projects from "./components/homepage/Projects";
+import Education from "./components/homepage/Education";
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  const sectionRefs = useRef([]);
-  // const [loaderFinished, setLoaderFinished] = useState(false);
-  // const [timeline, setTimeline] = useState(null);
-
-  // loader animation
-  // useLayoutEffect(() => {
-  //   const context = gsap.context(() => {
-  //     const tl = gsap.timeline({
-  //       onComplete: () => setLoaderFinished(true), // Set loaderFinished to true after timeline completes
-  //     });
-  //     setTimeline(tl);
-  //   });
-
-  //   return () => context.revert();
-  // }, []);
+  const sectionRefs = useRef([]); // Creating a sectionRefs array
 
   // Scrub animation of section headings
   useEffect(() => {
+    //TODO Learn useContext and useRef here
     const sectionHeadings = document.querySelectorAll(".section-heading");
     sectionHeadings.forEach((heading) => {
       const headings = heading.querySelectorAll(".heading");
+
       headings.forEach((individualHeading) => {
         ScrollTrigger.create({
           trigger: heading,
@@ -52,6 +41,7 @@ const App = () => {
           }),
           toggleActions: "play none none none",
         });
+        ScrollTrigger.refresh();
       });
     });
   }, []);
@@ -60,10 +50,6 @@ const App = () => {
 
   return (
     <div className="max-w-screen-full overflow-hidden bg-secondary-100">
-      {/* {!loaderFinished ? (
-        <Loader timeline={timeline} />
-      ) : ()} */}
-
       {loading ? (
         <Preloading setLoading={setLoading} />
       ) : (
@@ -72,16 +58,11 @@ const App = () => {
           <Hero />
           <main className="px-5 md:px-10 xl:px-20 2xl:px-28s">
             <Role forwardedRef={(el) => (sectionRefs.current[0] = el)} />
-            <About title={"about me"} />
-            <Skills
-              forwardedRef={(el) => (sectionRefs.current[1] = el)}
-              title={"my skills"}
-            />
+            <About />
+            <Skills forwardedRef={(el) => (sectionRefs.current[1] = el)} />
             <SocialLinks title={"social-links"} />
-            <Projects
-              forwardedRef={(el) => (sectionRefs.current[2] = el)}
-              title={"projects"}
-            />
+            <Projects forwardedRef={(el) => (sectionRefs.current[2] = el)} />
+            <Education forwardedRef={(el) => (sectionRefs.current[3] = el)} />
           </main>
         </>
       )}

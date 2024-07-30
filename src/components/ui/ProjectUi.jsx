@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
+
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Cursor from "../ui/Cursor";
 import "../../index.css";
 
 const Project = ({
@@ -37,7 +37,8 @@ const Project = ({
           <span className="text-[4rem] text-[#0DA34E]">{id} </span>
           {title}
         </h3>
-        <p className="text-gray-700 dark:text-white/70">{description}</p>
+        {/* <p className="text-secondary-600 dark:text-white/70">{description}</p> */}
+        <p className="text-secondary-600 ">{description}</p>
       </div>
 
       {/* Card and Tools/Year Section */}

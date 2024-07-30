@@ -13,7 +13,7 @@ function Projects({ forwardedRef }) {
       className="my-[10%] mx-auto max-w-screen-xl"
       aria-label="projects"
     >
-      <Heading title="my projects" />
+      <Heading title="projects" />
       <div className="flex justify-between items-center pt-10 ">
         <div className="">
           {ProjectsData.map((project, index) => (

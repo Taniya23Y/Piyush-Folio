@@ -8,8 +8,8 @@ const ProjectsData = [
   {
     id: "1.",
     title: "Banking System Simulator.",
-    description: `I focus on all things design and web related. With each of my services,
-                 my goal is to deliver an impactful and elevating digital experience for everyone.`,
+    description: `Banky is a Java application that simulates a basic banking system,
+             offering a practical learning experience for core programming concepts.`,
     skillsName: [
       "C language",
       "C++ language",
@@ -28,8 +28,8 @@ const ProjectsData = [
   {
     id: "2.",
     title: "Online Exam System.",
-    description: `I focus on all things design and web related. With each of my services,
-                 my goal is to deliver an impactful and elevating digital experience for everyone.`,
+    description: ` A Java Project for Assessment Simulation, This project simulates a comprehensive online examination system built with Java. It provides a platform for creating 
+                and taking timed exams, mimicking real-world testing scenarios.`,
     skillsName: [
       "SpringBoot Framework",
       "Java Advance",
@@ -40,7 +40,7 @@ const ProjectsData = [
     ],
     image: OES,
     color: "#977F6D",
-    year: "2023",
+    year: "2024",
     tools: "SpringBoot • TailwindCSS • JavaScript • Java Advance",
     link: "https://github.com/PiyushKaithwas",
   },
@@ -48,8 +48,9 @@ const ProjectsData = [
   {
     id: "3.",
     title: "Attendance System.",
-    description: `I focus on all things design and web related. With each of my services,
-                 my goal is to deliver an impactful and elevating digital experience for everyone.`,
+    description: `A Java Application for Streamlined Record keeping, This Java application tackles the challenge of 
+                attendance management by offering a user-friendly and efficient system. It streamlines the process 
+                of recording and managing attendance data, replacing traditional methods like paper sheets or manual spreadsheets.`,
     skillsName: [
       "Visual - studio",
       "GitHub",
@@ -61,7 +62,7 @@ const ProjectsData = [
     ],
     image: AMS,
     color: "#BBACAF",
-    year: "2023",
+    year: "2024",
     tools: "JSwing • TailwindCSS • JavaScript • Figma",
     link: "https://github.com/PiyushKaithwas",
   },

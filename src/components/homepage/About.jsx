@@ -1,11 +1,12 @@
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import profileImg from "/src/assets/Images/about-img.jpeg";
+/* eslint-disable react/prop-types */
 
+import { useEffect, useRef } from "react";
+import profileImg from "../../assets/Images/about-img.jpeg";
+import { ScrollTrigger } from "gsap/all";
+import { gsap } from "gsap";
 import Heading from "../ui/Heading";
 
-const About = () => {
+export default function About() {
   const profile = useRef(null);
   const aboutSection = useRef(null);
   const heading = useRef(null);
@@ -35,12 +36,7 @@ const About = () => {
 
   return (
     // Try using max width to contain the size of the container
-    <section
-      id="about"
-      ref={aboutSection}
-      aria-label="about me"
-      className="pt-20"
-    >
+    <section id="about" ref={aboutSection} aria-label="about me">
       <Heading title="about me" />
       <div className="mt-10 flex flex-col items-start gap-8 md:flex-row lg:gap-10 ">
         <div className="top-28 overflow-hidden rounded-md md:sticky md:w-1/2">
@@ -50,8 +46,8 @@ const About = () => {
             className="aspect-square h-auto w-full rounded-md object-cover object-center md:aspect-auto"
             src={profileImg}
             width="600"
-            height="900"
-            alt="piyush-image"
+            height="800"
+            alt="piyushImage"
           />
         </div>
         <div className="top-20 sm:sticky md:top-28 lg:top-32 md:w-1/2">
@@ -62,6 +58,7 @@ const About = () => {
             >
               A brief intro, who am I?
             </h3>
+
             <p
               ref={body}
               // className=" translate-y-10 text-body-1 2xl:text-4xl opacity-0 text-[#E3E3DE]"
@@ -84,6 +81,4 @@ const About = () => {
       </div>
     </section>
   );
-};
-
-export default About;
+}

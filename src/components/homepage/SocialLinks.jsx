@@ -34,12 +34,12 @@ const SocialLinks = ({ title }) => {
                 href="https://www.linkedin.com/in/taniyay"
                 className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl"
               >
-                <p className=" flex-col sm:text-xs md:text-sm lg:text-xl 2xl:text-5xl xl:p-7">
+                <p className=" flex-col sm:text-xs md:text-sm lg:text-xl 2xl:text-5xl xl:p-5">
                   Connect with me on LinkedIn for professional updates and
                   networking.
-                  <h3 className="text-[#665C51] font-bold underline">
-                    View LinkedIn
-                  </h3>
+                </p>
+                <p className="text-[#665C51] font-bold underline xl:p-5">
+                  View LinkedIn
                 </p>
               </a>
             </div>
@@ -57,11 +57,11 @@ const SocialLinks = ({ title }) => {
                 href="https://github.com/Taniya23Y"
                 className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl"
               >
-                <p className=" flex-col sm:text-xs md:text-sm lg:text-xl 2xl:text-5xl xl:p-7">
+                <p className=" flex-col sm:text-xs md:text-sm lg:text-xl 2xl:text-5xl xl:p-5">
                   Explore my projects and contributions on GitHub.
-                  <h3 className="text-[#665C51] font-bold underline">
-                    View GitHub
-                  </h3>
+                </p>
+                <p className="text-[#665C51] font-bold underline xl:p-5">
+                  View GitHub
                 </p>
               </a>
             </div>
@@ -79,12 +79,12 @@ const SocialLinks = ({ title }) => {
                 href="https://leetcode.com/u/taniyayadav882/"
                 className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl"
               >
-                <p className=" sm:text-xs md:text-sm lg:text-xl 2xl:text-5xl xl:p-7">
+                <p className=" sm:text-xs md:text-sm lg:text-xl 2xl:text-5xl xl:p-5">
                   Explore my coding journey and problem-solving solutions on
                   LeetCode.
-                  <h3 className="text-[#665C51] font-bold underline">
-                    View Leetcode
-                  </h3>
+                </p>
+                <p className="text-[#665C51] font-bold underline xl:p-5">
+                  View Leetcode
                 </p>
               </a>
             </div>

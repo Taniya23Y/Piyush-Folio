@@ -15,6 +15,9 @@ import Preloading from "./components/ui/Preloading";
 import SocialLinks from "./components/homepage/SocialLinks";
 import Projects from "./components/homepage/Projects";
 import Education from "./components/homepage/Education";
+import Experience from "./components/homepage/Experience";
+import Contact from "./components/homepage/Contact";
+import Footer from "./components/ui/Footer";
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -62,8 +65,12 @@ const App = () => {
             <Skills forwardedRef={(el) => (sectionRefs.current[1] = el)} />
             <SocialLinks title={"social-links"} />
             <Projects forwardedRef={(el) => (sectionRefs.current[2] = el)} />
-            <Education forwardedRef={(el) => (sectionRefs.current[3] = el)} />
+            <Education />
+            <Experience forwardedRef={(el) => (sectionRefs.current[3] = el)} />
+            <Contact />
           </main>
+          {/* <Contact /> */}
+          <Footer />
         </>
       )}
     </div>

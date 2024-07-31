@@ -171,3 +171,26 @@ button {
   color: transparent;
   background-size: cover;
 }
+
+@keyframes gradientBorder {
+  0% {
+    border-color: #8c8c73; /* Red */
+  }
+  25% {
+    border-color: #2d2e1e; /* Green */
+  }
+  50% {
+    border-color: #efefe4; /* Blue */
+  }
+  75% {
+    border-color: #a8c7a2; /* Magenta */
+  }
+  100% {
+    border-color: #9d9f74; /* Red */
+  }
+}
+
+.animate-gradient-border {
+  animation: gradientBorder 3s linear infinite;
+  border-style: solid;
+}

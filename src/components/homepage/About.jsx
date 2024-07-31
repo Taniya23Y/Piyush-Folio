@@ -35,7 +35,6 @@ export default function About() {
   }, [aboutSection]);
 
   return (
-    // Try using max width to contain the size of the container
     <section id="about" ref={aboutSection} aria-label="about me">
       <Heading title="about me" />
       <div className="mt-10 flex flex-col items-start gap-8 md:flex-row lg:gap-10 ">
@@ -61,7 +60,6 @@ export default function About() {
 
             <p
               ref={body}
-              // className=" translate-y-10 text-body-1 2xl:text-4xl opacity-0 text-[#E3E3DE]"
               className=" translate-y-10  text-xl 2xl:text-4xl opacity-0  text-secondary-600"
             >
               A dedicated Java developer 💻 with a passion for crafting

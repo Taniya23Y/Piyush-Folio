@@ -63,7 +63,6 @@ const SkillUi = ({ title, description, items }) => {
       style={{ scale, opacity }}
       className="cardContainer sticky top-0 mt-10 flex justify-between items-center flex-col gap-40 md:flex-rows-3 md:gap-24 2xl:gap-36 xl:gap-32 select-none"
     >
-      {/* <div className="Card relative rounded-lg border bg-gradient-to-r from-[#D1D2C4] to-[#D1D2C4] p-[2rem] w-full md:w-full lg:w-4/5"> */}
       <div className="Card relative rounded-lg border bg-gradient-to-r from-[#D1D2C4] to-[#D1D2C4] p-[2rem]  w-[23rem] sm:w-[35rem] md:w-[40rem] lg:w-[60rem] xl:w-[70rem] 2xl:w-[130rem]">
         <div className="flex flex-col md:flex-row md:justify-between md:space-x-8">
           <div className="space-y-6 md:flex-1">
@@ -89,7 +88,6 @@ const SkillUi = ({ title, description, items }) => {
 
           <div
             ref={servicesRef}
-            // className="mt-6 md:mt-0 select-none leading-[2.3rem] text-secondary-500 md:leading-[2.5rem] lg:leading-[3.4rem] md:flex-1 md:translate-y-10 md:opacity-0"
             className="mt-6 md:mt-0 select-none leading-[2.3rem] text-[#404551] md:leading-[2.5rem] lg:leading-[3.4rem] md:flex-1 md:translate-y-10 md:opacity-0"
           >
             {items.map((item, index) => (

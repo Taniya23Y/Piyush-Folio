@@ -46,7 +46,7 @@ const Experience = ({ forwardedRef }) => {
     <section
       ref={forwardedRef}
       id="experience"
-      className="select-none"
+      className="select-none  mx-auto max-w-screen-xl"
       aria-label="experience"
     >
       <div className="" aria-label="experience">
@@ -54,14 +54,17 @@ const Experience = ({ forwardedRef }) => {
           <Heading title="experience" />
         </h2>
 
-        <div ref={ref} className="w-[75%] mx-auto relative">
+        <div
+          ref={ref}
+          className="w-[99%] md:w-[75%]  lg:w-[75%]  xl:w-[75%]  2xl:w-[75%] mx-auto relative"
+        >
           <motion.div
             style={{ scaleY: scrollYProgress }}
             className="absolute left-9 top-0 w-[4px] h-full bg-[#B6BAAB] origin-top"
           />
-          <ul className="w-full flex flex-col items-center justify-between ml-4">
+          <ul className="w-full flex flex-col items-center justify-between ml-6">
             <Details
-              position="Java Developer"
+              position="Java Intern"
               company="CodeSoft"
               time="2024-present"
               address="Indore, India"
@@ -70,10 +73,10 @@ const Experience = ({ forwardedRef }) => {
 
             <Details
               position="Java Intern"
-              company="CipherByte"
+              company="Cipher-Byte"
               time="2024-present"
               address="Indore, India"
-              work="Worked as a Java intern at CipherByte during a task-based internship."
+              work="Worked as a Java intern at CipherByte during a task-based internship. where I was responsible for developing new features and improving the performance of the company's task based solutions."
             />
 
             <Details
@@ -81,7 +84,7 @@ const Experience = ({ forwardedRef }) => {
               company="Bharat Intern"
               time="2024-present"
               address="Indore, India"
-              work="Worked as a Java intern at Bharat Intern during a task-based internship."
+              work="Worked as a Java intern at Bharat Intern during a task-based internship, where I was responsible for developing new features and improving the performance of the company's task based solutions."
             />
           </ul>
         </div>

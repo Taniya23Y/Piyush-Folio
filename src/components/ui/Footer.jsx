@@ -14,7 +14,7 @@ export default function Footer() {
           </span>
         </div>
         <div className="flex-grow text-center">
-          <span className="text-body-4 2xl:text-body-1">
+          <span className="text-body-4 2xl:text-body-1 p-3">
             Site designed and developed by{" "}
             <a
               href="https://linkedin.com/in/taniyay"
@@ -24,7 +24,7 @@ export default function Footer() {
             >
               Taniya Yadav
             </a>{" "}
-            and coded with ❤️‍🔥
+            and coded with 💖
           </span>
         </div>
       </div>

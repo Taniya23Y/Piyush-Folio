@@ -2,6 +2,7 @@
 import Heading from "../ui/Heading";
 import "../../index.css";
 import Cursor from "../ui/Cursor";
+// import { Icon } from "@iconify/react";
 
 const SocialLinks = ({ title }) => {
   return (
@@ -31,13 +32,14 @@ const SocialLinks = ({ title }) => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://www.linkedin.com/in/taniyay"
+                href="https://www.linkedin.com/in/piyushkaithwas/"
                 className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl"
               >
                 <p className=" flex-col sm:text-xs md:text-sm lg:text-xl 2xl:text-5xl xl:p-5">
                   Connect with me on LinkedIn for professional updates and
                   networking.
                 </p>
+                {/* <Icon icon="mdi:linkedin" color="#666" /> */}
                 <p className="text-[#665C51] font-bold underline xl:p-5">
                   View LinkedIn
                 </p>
@@ -54,12 +56,13 @@ const SocialLinks = ({ title }) => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://github.com/Taniya23Y"
+                href="https://github.com/piyushkaithwas"
                 className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl"
               >
                 <p className=" flex-col sm:text-xs md:text-sm lg:text-xl 2xl:text-5xl xl:p-5">
                   Explore my projects and contributions on GitHub.
                 </p>
+                {/* <Icon icon="mdi:github" color="#666" /> */}
                 <p className="text-[#665C51] font-bold underline xl:p-5">
                   View GitHub
                 </p>
@@ -76,13 +79,14 @@ const SocialLinks = ({ title }) => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://leetcode.com/u/taniyayadav882/"
+                href="https://leetcode.com/u/piyushkaithwas/"
                 className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl"
               >
                 <p className=" sm:text-xs md:text-sm lg:text-xl 2xl:text-5xl xl:p-5">
                   Explore my coding journey and problem-solving solutions on
                   LeetCode.
                 </p>
+                {/* <Icon icon="mdi:leetcode" color="#666" /> */}
                 <p className="text-[#665C51] font-bold underline xl:p-5">
                   View Leetcode
                 </p>

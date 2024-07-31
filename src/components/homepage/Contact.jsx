@@ -7,11 +7,38 @@ import "../../index.css";
 
 export default function Contact() {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
+  const [result, setResult] = useState("");
 
   const heading = useRef(null);
   const body = useRef(null);
   const image = useRef(null);
   const contactSection = useRef(null);
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "9b8b8fea-dbff-4de7-9e7c-d5c294f8a624");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        event.target.reset();
+      } else {
+        setResult(data.message || "Failed to send the message.");
+      }
+    } catch (error) {
+      setResult("An error occurred. Please try again.");
+    }
+  };
 
   useEffect(() => {
     ScrollTrigger.create({
@@ -70,12 +97,12 @@ export default function Contact() {
             </h4>
             <div className="flex flex-col space-y-3 text-body-2 2xl:text-3xl">
               <a
-                href="mailto:taniyayadav882@gmail.com"
+                href="mailto:kaithwaspiyush0115@gmail.com"
                 className="group relative w-fit cursor-pointer"
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>taniyayadav882@gmail.com</span>
+                <span>kaithwaspiyush0115@gmail.com</span>
                 <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
               </a>
             </div>
@@ -95,10 +122,11 @@ export default function Contact() {
         <div className="col-span-3 grid grid-cols-1 gap-x-4 gap-y-8 text-accent-300 sm:grid-cols-2 sm:gap-y-0 md:grid-cols-1">
           <div className="border-4 rounded-md animate-gradient-border p-3">
             <form
+              onSubmit={onSubmit}
               name="contact"
               action="/contact"
               autoComplete="off"
-              className="mt-10 font-grotesk p-6 rounded-lg shadow-md "
+              className="mt-10 font-grotesk p-6 rounded-lg shadow-md"
               method="POST"
             >
               <input type="hidden" name="form-name" value="contact" />
@@ -164,13 +192,18 @@ export default function Contact() {
                 </span>
               </button>
             </form>
+            {result && (
+              <div className="mt-4 text-center text-lg font-medium text-accent-500">
+                {result}
+              </div>
+            )}
           </div>
 
           <div className="space-y-3 pt-5">
             <h4 className="text-body-1 font-semibold 2xl:text-4xl">Location</h4>
             <div className="space-y-2 text-body-2 2xl:text-3xl">
               <p>
-                Indore, India <br></br>
+                Indore, India <br />
                 {time}
               </p>
             </div>

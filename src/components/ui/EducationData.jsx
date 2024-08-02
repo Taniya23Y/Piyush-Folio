@@ -10,15 +10,15 @@ const EducationData = [
     id: 2,
     title: "Higher Secondary School",
     duration: "2019 - 2021",
-    institution: "Aditya Vidya Vihar Hr. Sec School, Khargone",
-    gpa: "8.0",
+    institution: "Lav kush vidhya Vihar higher secondary school, Indore.",
+    gpa: "7.7",
   },
   {
     id: 3,
     title: "Secondary School ",
     duration: "2008 - 2019",
-    institution: "Bapna Public School, Gogawan",
-    gpa: "8.29",
+    institution: "Lav kush vidhya Vihar higher secondary school, Indore.",
+    gpa: "7.7",
   },
 ];
 

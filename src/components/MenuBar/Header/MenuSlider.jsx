@@ -8,7 +8,7 @@ import Nav from "./Nav";
 const menu = {
   open: {
     width: "50vw", // Adjusted to be responsive
-    height: "95vh", // Adjusted to be responsive
+    height: "80vh", // Adjusted to be responsive
     top: "-7px", // Adjusted for vertical centering on smaller screens
     right: "-8px", // Adjusted for horizontal centering on smaller screens
     transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1] },

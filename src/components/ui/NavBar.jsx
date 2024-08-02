@@ -42,10 +42,7 @@ const Navbar = ({ sectionRefs }) => {
     >
       <nav className="flex items-center justify-between w-full p-1 border-b-[1px] border-[#0DA34E]">
         <div className="Nav-Logo text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#0DA34E] z-50 flex items-center font-[IrishGrover] font-bold">
-          <a
-            href="home"
-            className="group Nav-Logo relative block md:inline-block"
-          >
+          <a href="/" className="group Nav-Logo relative block md:inline-block">
             Piyush Kaithwas
           </a>
         </div>

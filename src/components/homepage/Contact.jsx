@@ -77,7 +77,7 @@ export default function Contact() {
     <section
       id="contact"
       className="mt-[10%] p-10 pb-10 overflow-hidden rounded-tl-3xl rounded-tr-3xl rounded-3xl bg-[#CDEA68]"
-      aria-label="contact me"
+      aria-label="contact"
     >
       <Heading title="Contact" />
       <div

@@ -7,9 +7,9 @@ import Cursor from "../ui/Cursor";
 const SocialLinks = ({ title }) => {
   return (
     <section
-      id="skills"
+      id="social-links"
       className="my-[10%] mx-auto max-w-screen-xl"
-      aria-label="skills"
+      aria-label="social-links"
     >
       <div>
         <Heading title={title} />

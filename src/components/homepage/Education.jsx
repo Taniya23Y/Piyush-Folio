@@ -1,7 +1,4 @@
 // @flow strict
-/* eslint-disable react/prop-types */
-
-// import githubImage from "../../assets/Images/github.jpg"; // Correct import
 
 import EducationData from "../ui/EducationData";
 import { BsPersonWorkspace } from "react-icons/bs";

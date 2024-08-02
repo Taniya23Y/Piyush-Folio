@@ -113,6 +113,27 @@
   }
 }
 
+@layer base {
+  .portfolio-pencil {
+    height: 6vw;
+    width: 6vw;
+  }
+
+  @media (max-width: 640px) {
+    .portfolio-pencil {
+      height: 8vh;
+      width: 8vh;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .portfolio-pencil {
+      height: 4vw;
+      width: 4vw;
+    }
+  }
+}
+
 button {
   cursor: pointer;
 }

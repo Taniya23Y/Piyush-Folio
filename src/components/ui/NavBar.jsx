@@ -1,26 +1,24 @@
 /* eslint-disable react/prop-types */
-
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import MenuSlider from "../MenuBar/Header/MenuSlider";
+
+import "../helper/Navsm.module.scss";
 
 const Navbar = ({ sectionRefs }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+  const [isActive, setIsActive] = useState(false);
   const navBar = useRef(null);
-  const logo = useRef(null);
-  const cta = useRef(null);
-  const tl = useRef(gsap.timeline()); // Initialize the timeline here
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    tl.current.to(navBar.current, {
+    gsap.to(navBar.current, {
       y: 0,
       duration: 3,
       delay: 0.5,
       ease: "power4.inOut",
     });
-  }, []); // Add an empty dependency array to ensure it runs only once
+  }, []);
 
   useEffect(() => {
     sectionRefs.forEach((section) => {
@@ -28,7 +26,6 @@ const Navbar = ({ sectionRefs }) => {
         trigger: section,
         start: "top 375px",
         end: "bottom 300px",
-        // markers: true,
         animation: gsap
           .timeline()
           .to(navBar.current, { color: "" })
@@ -36,50 +33,25 @@ const Navbar = ({ sectionRefs }) => {
         toggleActions: "restart reverse restart reverse",
       });
     });
-  }, [sectionRefs]); // Add sectionRefs to dependency array
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  }, [sectionRefs]);
 
   return (
     <header
       ref={navBar}
-      className="max-w-screen-full mx-auto fixed top-0 z-50 w-full flex items-center justify-center bg-[#0E0E0C] px-5 py-2 select-none"
+      className="max-w-screen-full mx-auto header fixed top-0 z-50 w-full flex items-center justify-center bg-[#0E0E0C] px-5 py-2 select-none"
     >
       <nav className="flex items-center justify-between w-full p-1 border-b-[1px] border-[#0DA34E]">
-        {/* logo  */}
-        <div
-          ref={logo}
-          className="Nav-Logo text-xl sm:text-xl md:text-2xl lg:text-3xl text-[#0DA34E] z-50 flex items-center font-[IrishGrover] font-bold"
-        >
-          Piyush Kaithwas
-        </div>
-        <div className="flex items-center md:hidden">
-          <button
-            onClick={toggleMenu}
-            className="text-white focus:outline-none"
+        <div className="Nav-Logo text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#0DA34E] z-50 flex items-center font-[IrishGrover] font-bold">
+          <a
+            href="home"
+            className="group Nav-Logo relative block md:inline-block"
           >
-            <svg
-              className="w-6 h-6 hidden"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
-            </svg>
-          </button>
+            Piyush Kaithwas
+          </a>
         </div>
+
         <div
-          className={`Nav-Links text-white flex-col md:flex md:flex-row md:items-center  justify-between lg:gap-7 gap-5  text-[1rem] text-opacity-60 ${
-            isOpen ? "hidden" : "hidden"
-          }`}
+          className={`Nav-Links text-white flex-col md:flex md:flex-row md:items-center justify-between lg:gap-7 gap-5 text-[1rem] text-opacity-60 hidden`}
         >
           <a href="#home" className="group relative block md:inline-block">
             <span>Home</span>
@@ -107,17 +79,19 @@ const Navbar = ({ sectionRefs }) => {
         </div>
         <div>
           <a
-            className=" group relative hover:bg-transparent block md:inline-block"
+            className="group relative hover:bg-transparent  md:inline-block hidden"
             href="#contact"
-            ref={cta}
           >
             <span className="relative w-fit">
               <span className="absolute bottom-2 h-[0.15em] w-0 bg-white opacity-90 duration-300 ease-out group-hover:w-full"></span>
-              <button className="bg-[#0DA34E] capitalize text-[1rem] px-2 py-[5px] rounded-full font-bold text-white ">
+              <button className="bg-[#0DA34E] capitalize text-[1rem] px-2 py-[5px] rounded-full font-bold text-white">
                 LET&apos;s TALK.
               </button>
             </span>
           </a>
+        </div>
+        <div className="menuSlider group p-5 2xl:hidden xl:hidden lg:hidden sm:hidden">
+          <MenuSlider isActive={isActive} setIsActive={setIsActive} />
         </div>
       </nav>
     </header>

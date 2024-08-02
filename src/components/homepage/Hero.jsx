@@ -75,9 +75,12 @@ const Hero = () => {
             </span>
             <span className="portfolio-span md:text-8xl font-[IrishGrover] font-bold flex items-center ml-2">
               P
-              <span>
+              <span className="portfolio-span md:text-8xl font-[IrishGrover] font-bold md:hidden xl:hidden 2xl:hidden lg:hidden">
+                o
+              </span>
+              <span className="hidden md:flex">
                 <svg
-                  className="portfolio-pencil c-bttn__morph h-[6vw] w-[6vw] rounded-full bg-[#0BA34E] ml-1"
+                  className="portfolio-pencil  h-[6vw] w-[6vw] rounded-full bg-[#0BA34E] ml-1 mr-1"
                   fill="none"
                   viewBox="0 0 131 136"
                 >
@@ -96,7 +99,7 @@ const Hero = () => {
                   ></path>
                 </svg>
               </span>
-              <span className="portfolio-span ml-2 font-[IrishGrover] font-bold md:text-8xl">
+              <span className="portfolio-span font-[IrishGrover] font-bold md:text-8xl">
                 rtFolio
               </span>
             </span>

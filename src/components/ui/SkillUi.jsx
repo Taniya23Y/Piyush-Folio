@@ -63,7 +63,7 @@ const SkillUi = ({ title, description, items }) => {
       style={{ scale, opacity }}
       className="cardContainer sticky top-0 mt-10 flex justify-between items-center flex-col gap-40 md:flex-rows-3 md:gap-24 2xl:gap-36 xl:gap-32 select-none"
     >
-      <div className="Card relative rounded-lg border bg-gradient-to-r from-[#D1D2C4] to-[#D1D2C4] p-[2rem]  w-[23rem] sm:w-[35rem] md:w-[40rem] lg:w-[60rem] xl:w-[70rem] 2xl:w-[130rem]">
+      <div className="Card relative rounded-lg border bg-gradient-to-r from-[#D1D2C4] to-[#D1D2C4] p-[2rem]  w-[23rem] sm:w-[35rem] md:w-[40rem] lg:w-[60rem] xl:w-[70rem] 2xl:w-[78rem]">
         <div className="flex flex-col md:flex-row md:justify-between md:space-x-8">
           <div className="space-y-6 md:flex-1">
             <div className="space-y-3 2xl:space-y-10">

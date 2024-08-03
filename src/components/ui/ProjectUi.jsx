@@ -37,7 +37,6 @@ const Project = ({
           <span className="text-[4rem] text-[#0DA34E]">{id} </span>
           {title}
         </h3>
-        {/* <p className="text-secondary-600 dark:text-white/70">{description}</p> */}
         <p className="text-secondary-600 ">{description}</p>
       </div>
 
@@ -62,10 +61,10 @@ const Project = ({
         {/* Tools and Year */}
         <div className="flex justify-center lg:justify-start mt-4">
           <div className="flex space-x-2">
-            <p className="rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl">
+            <p className="rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4">
               {year}
             </p>
-            <p className="rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4 2xl:text-3xl">
+            <p className="rounded-full bg-transparent border border-secondary-600 flex justify-center items-center px-4 py-1 text-secondary-600 text-body-4">
               {tools}
             </p>
           </div>

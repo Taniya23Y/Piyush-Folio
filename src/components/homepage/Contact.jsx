@@ -87,15 +87,15 @@ export default function Contact() {
         <div className="col-span-3">
           <h3
             ref={heading}
-            className="max-w-lg 2xl:max-w-3xl text-heading-3 2xl:text-7xl font-semibold leading-tight translate-x-10 opacity-0"
+            className="max-w-lg 2xl:max-w-3xl text-heading-3 2xl:text-6xl font-semibold leading-tight translate-x-10 opacity-0"
           >
             Let&apos;s scale our Network.
           </h3>
           <div className="space-y-3 pt-5" ref={body}>
-            <h4 className="text-body-1 2xl:text-4xl font-semibold">
+            <h4 className="text-body-1 2xl:text-3xl font-semibold">
               Contact Details
             </h4>
-            <div className="flex flex-col space-y-3 text-body-2 2xl:text-3xl">
+            <div className="flex flex-col space-y-3 text-body-2 2xl:text-xl">
               <a
                 href="mailto:kaithwaspiyush0115@gmail.com"
                 className="group relative w-fit cursor-pointer"
@@ -200,8 +200,8 @@ export default function Contact() {
           </div>
 
           <div className="space-y-3 pt-5">
-            <h4 className="text-body-1 font-semibold 2xl:text-4xl">Location</h4>
-            <div className="space-y-2 text-body-2 2xl:text-3xl">
+            <h4 className="text-body-1 font-semibold 2xl:text-2xl">Location</h4>
+            <div className="space-y-2 text-body-2 2xl:text-xl">
               <p>
                 Indore, India <br />
                 {time}
